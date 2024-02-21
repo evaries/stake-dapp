@@ -72,6 +72,7 @@ const App = () => {
         return;
       }
 
+      setMessage("Withdraw in progress. Please wait...");
       const response = await axios.post(
         `${baseUrl}/withdraw`,
         { amount },
@@ -131,6 +132,7 @@ const App = () => {
                 "border-red-500 text-red-900 placeholder-red-700 text-sm focus:ring-red-500 focus:border-red-500":
                   error,
               })}
+              value={amount}
               onChange={(e) => {
                 setError("");
                 setMessage("");
