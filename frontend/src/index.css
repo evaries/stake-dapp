@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+ .button-primary {
+  @apply font-semibold text-base max-w-44 w-full bg-gray-500 text-white  focus:ring-4 focus:outline-none rounded-full px-5 py-4 text-center
+ }
+ .background {
+  @apply bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#23486F] via-[#192532] to-[#10131C]
+ }
+
+ .divider {
+  @apply bg-gradient-to-r from-[#121721] via-[#29588b] to-[#121721]
+ }
+
+ .bg-footer {
+  @apply bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#23486F] via-[#192532] to-[#10131C]
+ }
+
+ .input-base {
+  @apply bg-gray-900 border-spacing-4 border border-gray-300 text-sm text-white rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full px-6 py-4 opacity-50
+ }
+
+}
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
